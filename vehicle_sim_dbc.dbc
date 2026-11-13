@@ -1,0 +1,96 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: vehicle_sim
+VAL_TABLE_ Transmission_VT 1 "Manual" 0 "Automatic" ;
+VAL_TABLE_ PedalMode_VT 1 "One_Pedal" 0 "Two_Pedal" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Transmission_Type : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Engine_Torque : 0|8@1+ (1,0) [0|255] "Nm" Vector__XXX
+ SG_ Available_Torque : 0|8@1+ (1,0) [0|255] "Nm" Vector__XXX
+ SG_ Active_Gear_Ratio : 0|8@1+ (0.02,0) [0|5.1] "" Vector__XXX
+ SG_ Active_Gear : 0|8@1- (1,0) [-1|8] "" Vector__XXX
+
+BO_ 1299 vehicle_sim_rx_message_1: 8 Vector__XXX
+ SG_ Dash_Character8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dash_Character7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dash_Character6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dash_Character5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dash_Character4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dash_Character3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dash_Character2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dash_Character1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1298 vehicle_sim_tx_message_2: 8 vehicle_sim
+ SG_ Engine_Speed : 48|16@1+ (1,0) [0|10000] "RPM" Vector__XXX
+ SG_ Pedal_Mode : 40|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Grade : 32|8@1- (1,0) [-100|100] "%" Vector__XXX
+ SG_ Gear : 24|8@1- (1,0) [-1|8] "" Vector__XXX
+ SG_ Clutch_On : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brake_Position : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Throttle_Position : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 1297 vehicle_sim_tx_message_1: 8 vehicle_sim
+ SG_ Acceleration : 48|16@1- (0.01,0) [-100|100] "m/s2" Vector__XXX
+ SG_ Speed : 32|16@1- (0.01,0) [-100|100] "m/s" Vector__XXX
+ SG_ Distance : 0|32@1- (1,0) [-1000000|1000000] "m" Vector__XXX
+
+BO_ 1300 vehicle_sim_tx_message_3: 1 Vector__XXX
+ SG_ Hazards_On : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 1299 Dash_Character8 "ASCII Character to display on dashboard";
+CM_ SG_ 1299 Dash_Character7 "ASCII Character to display on dashboard";
+CM_ SG_ 1299 Dash_Character6 "ASCII Character to display on dashboard";
+CM_ SG_ 1299 Dash_Character5 "ASCII Character to display on dashboard";
+CM_ SG_ 1299 Dash_Character4 "ASCII Character to display on dashboard";
+CM_ SG_ 1299 Dash_Character3 "ASCII Character to display on dashboard";
+CM_ SG_ 1299 Dash_Character2 "ASCII Character to display on dashboard";
+CM_ SG_ 1299 Dash_Character1 "ASCII Character to display on dashboard";
+CM_ SG_ 1298 Pedal_Mode "0 = Two Pedal Mode
+1 = One Pedal Mode";
+CM_ SG_ 1298 Gear "-1 = R
+0 = Neutral
+";
+CM_ SG_ 1298 Clutch_On "1 = Clutch ON
+0 = Clutch OFF";
+VAL_ 3221225472 Transmission_Type 1 "Manual" 0 "Automatic" ;
+VAL_ 1298 Pedal_Mode 1 "One_Pedal" 0 "Two_Pedal" ;
+
+
