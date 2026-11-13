@@ -1,0 +1,690 @@
+
+13-Nov-2026 11:08:09
+Preprocessing model...done
+Checking compatibility for test generation: model 'Lab3_BreakLight'
+Compiling model...done
+Building model representation...done
+
+13-Nov-2026 11:09:14
+'Lab3_BreakLight_replacement' is compatible for test generation with Simulink Design Verifier.
+
+Generating tests...
+
+SATISFIED
+Transmission/MATLAB Function1
+if vehicle_speed < down_th && current_gear > 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed < down_th && current_gear > 1 with vehicle_speed < down_th false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed < down_th && current_gear > 1 with current_gear > 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+(one_pedal == 1 && throttle < 30) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+(one_pedal == 1 && throttle < 30) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+one_pedal == 1 && throttle < 30 with one_pedal == 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+one_pedal == 1 && throttle < 30 with one_pedal == 1 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+one_pedal == 1 && throttle < 30 with throttle < 30 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+one_pedal == 1 && throttle < 30 with throttle < 30 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+(brake_pedal <= 0 && ~(one_pedal == 1 && throttle < 30)) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+(brake_pedal <= 0 && ~(one_pedal == 1 && throttle < 30)) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+brake_pedal <= 0 && ~(one_pedal == 1 && throttle < 30) with brake_pedal <= 0 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+brake_pedal <= 0 && ~(one_pedal == 1 && throttle < 30) with brake_pedal <= 0 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+brake_pedal <= 0 && ~(one_pedal == 1 && throttle < 30) with one_pedal == 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+brake_pedal <= 0 && ~(one_pedal == 1 && throttle < 30) with one_pedal == 1 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+brake_pedal <= 0 && ~(one_pedal == 1 && throttle < 30) with throttle < 30 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+brake_pedal <= 0 && ~(one_pedal == 1 && throttle < 30) with throttle < 30 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+if vehicle_speed > up_th && current_gear < num_gears true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+if vehicle_speed > up_th && current_gear < num_gears false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed > up_th && current_gear < num_gears with vehicle_speed > up_th false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed > up_th && current_gear < num_gears with vehicle_speed > up_th true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed > up_th && current_gear < num_gears with current_gear < num_gears false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed > up_th && current_gear < num_gears with current_gear < num_gears true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Compare To Constant/Compare
+RelationalOperator: input1 > input2 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Compare To Constant/Compare
+RelationalOperator: input1 > input2 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Compare To Constant1/Compare
+RelationalOperator: input1 == input2 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Compare To Constant1/Compare
+RelationalOperator: input1 == input2 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Compare To Constant2/Compare
+RelationalOperator: input1 < input2 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Compare To Constant2/Compare
+RelationalOperator: input1 < input2 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator
+Logic: input port 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator
+Logic: input port 1 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator
+Logic: input port 2 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator
+Logic: input port 2 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+Logic: input port 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+Logic: input port 1 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+Logic: input port 2 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+Logic: input port 2 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+C1 || (C2 && C3) with C1 (Logical Operator1 In1) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+C1 || (C2 && C3) with C1 (Logical Operator1 In1) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+C1 || (C2 && C3) with C2 (Logical Operator In1) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+C1 || (C2 && C3) with C2 (Logical Operator In1) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+C1 || (C2 && C3) with C3 (Logical Operator In2) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Brake_Light_Logic/Logical Operator1
+C1 || (C2 && C3) with C3 (Logical Operator In2) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Vehicle/MATLAB Function
+function vel_out = vel_function(vel_in, gear) executed
+Analysis Time = 00:00:24
+
+SATISFIED
+Vehicle/MATLAB Function
+if gear == -1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Abs
+input < 0 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Multiport Switch
+truncated input value = 1 (output is from input port 1)
+Analysis Time = 00:00:24
+
+SATISFIED
+Multiport Switch
+truncated input value = 2 (output is from input port 2)
+Analysis Time = 00:00:24
+
+SATISFIED
+Multiport Switch
+truncated input value = *,3 (output is from input port 3)
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Abs
+input < 0 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Switch1
+trigger > threshold false (output is from 3rd input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Switch1
+trigger > threshold true (output is from 1st input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Min
+Logic to determine output input 1 is the minimum
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Min
+Logic to determine output input 2 is the minimum
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+function new_gear = gearShiftLogic(vehicle_speed, throttle, shift_up_speeds, shift_down_speeds, gears, current_gear) executed
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+if current_gear == 0 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+if current_gear == 0 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed > up_th false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed > up_th true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+current_gear < num_gears false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+current_gear < num_gears true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed < down_th false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed < down_th true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+current_gear > 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Switch2
+trigger > threshold false (output is from 3rd input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Switch2
+trigger > threshold true (output is from 1st input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Switch
+trigger > threshold false (output is from 3rd input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Switch
+trigger > threshold true (output is from 1st input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/getGearRatio
+function gear_ratio = getGearRatio(active_gear, gear_ratios, rev_ratio, prev_gear_ratio)  executed
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/getGearRatio
+if (prev_gear_ratio == 0) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/getGearRatio
+if (prev_gear_ratio == 0) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/getGearRatio
+if (active_gear == -1) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/getGearRatio
+if (active_gear == -1) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/getGearRatio
+elseif (active_gear == 0) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/getGearRatio
+elseif (active_gear == 0) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/getGearRatio
+elseif (active_gear <= length(gear_ratios)) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Engine_Speed_Limits
+input > upper limit false
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Engine_Speed_Limits
+input > upper limit true
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Engine_Speed_Limits
+input >= lower limit false
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Engine_Speed_Limits
+input >= lower limit true
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Switch
+trigger > threshold false (output is from 3rd input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Switch
+trigger > threshold true (output is from 1st input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Min
+Logic to determine output input 1 is the minimum
+Analysis Time = 00:00:24
+
+SATISFIED
+Engine/Min
+Logic to determine output input 2 is the minimum
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA
+function gear_ratio = getGearRatio(active_gear, gear_ratios, rev_ratio)   executed
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA
+if (active_gear == -1) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA
+if (active_gear == -1) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA
+elseif (active_gear == 0) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA
+elseif (active_gear == 0) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA
+elseif (active_gear <= num_gears) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA
+elseif (active_gear <= num_gears) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA1
+function gear_ratio = getGearRatio(active_gear, gear_ratios, rev_ratio) executed
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA1
+if (active_gear == -1) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA1
+if (active_gear == -1) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA1
+elseif (active_gear == 0) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA1
+elseif (active_gear == 0) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA1
+elseif (active_gear <= num_gears) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLA1
+elseif (active_gear <= num_gears) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Switch
+trigger > threshold false (output is from 3rd input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/Switch
+trigger > threshold true (output is from 1st input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Wheels and Brake/Switch1
+trigger > threshold false (output is from 3rd input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Wheels and Brake/Switch1
+trigger > threshold true (output is from 1st input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Wheels and Brake/Min
+Logic to determine output input 1 is the minimum
+Analysis Time = 00:00:24
+
+SATISFIED
+Wheels and Brake/Min
+Logic to determine output input 2 is the minimum
+Analysis Time = 00:00:24
+
+SATISFIED
+Wheels and Brake/Switch2
+trigger > threshold false (output is from 3rd input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Wheels and Brake/Switch2
+trigger > threshold true (output is from 1st input port)
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (1) "TSR1a: Lamp ON when brake pressed"
+(brake_pedal > 0) false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (1) "TSR1a: Lamp ON when brake pressed"
+(brake_pedal > 0) true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+one_pedal == 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+one_pedal == 1 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+throttle < 30 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (2) "TSR1b: Lamp ON in one-pedal slowing"
+throttle < 30 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+brake_pedal <= 0 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+brake_pedal <= 0 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+one_pedal == 1 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+one_pedal == 1 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+throttle < 30 false
+Analysis Time = 00:00:24
+
+SATISFIED
+Requirement (3) "TSR7: Lamp OFF otherwise"
+throttle < 30 true
+Analysis Time = 00:00:24
+
+SATISFIED
+Vehicle/a2v
+integration result > upper limit false
+Analysis Time = 00:00:24
+
+SATISFIED
+Vehicle/a2v
+integration result > upper limit true
+Analysis Time = 00:00:24
+
+SATISFIED
+Vehicle/a2v
+integration result < lower limit false
+Analysis Time = 00:00:24
+
+SATISFIED
+Vehicle/a2v
+integration result < lower limit true
+Analysis Time = 00:00:24
+
+SATISFIED
+Transmission/MATLAB Function1
+if vehicle_speed < down_th && current_gear > 1 true
+Analysis Time = 00:00:28
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed < down_th && current_gear > 1 with vehicle_speed < down_th true
+Analysis Time = 00:00:28
+
+SATISFIED
+Transmission/MATLAB Function1
+vehicle_speed < down_th && current_gear > 1 with current_gear > 1 true
+Analysis Time = 00:00:28
+
+SATISFIED
+Transmission/MATLAB Function1
+current_gear > 1 true
+Analysis Time = 00:00:28
+
+SATISFIED
+Engine/getGearRatio
+elseif (active_gear <= length(gear_ratios)) false
+Analysis Time = 00:00:29
+
+UNDECIDED DUE TO ARRAY OUT OF BOUNDS
+Vehicle/MATLAB Function
+if gear == -1 true
+Analysis Time = 00:00:39
+
+UNDECIDED DUE TO ARRAY OUT OF BOUNDS
+Engine/Abs
+input < 0 true
+Analysis Time = 00:00:39
+
+UNDECIDED DUE TO ARRAY OUT OF BOUNDS
+Transmission/Abs
+input < 0 true
+Analysis Time = 00:00:39
+
+SATISFIED
+Vehicle/MATLAB Function
+if gear == -1 true
+Analysis Time = 00:00:42
+
+SATISFIED
+Engine/Abs
+input < 0 true
+Analysis Time = 00:00:42
+
+SATISFIED
+Transmission/Abs
+input < 0 true
+Analysis Time = 00:00:42
+
+
+13-Nov-2026 11:10:08
+
+Completed normally.
+
+Generating output files:
+
+13-Nov-2026 11:10:12
+Results generation completed.
+
+    Data file:
+    C:\Users\balog\Documents\Github\ELEC471\sldv_output\Lab3_BreakLight\Lab3_BreakLight_sldvdata.mat
+

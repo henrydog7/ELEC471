@@ -16,6 +16,8 @@ mcp2515_can CAN(SPI_CS_PIN); // Set CS pin
 #include "CAN_data.h"
 int data_counter = 0;
 
+unsigned char buf[8];
+
 
 void setup() {
   // Init Arduino serial
@@ -80,9 +82,9 @@ void TaskBlink(void *pvParameters)
   for (;;)
   {
     digitalWrite(LED_BUILTIN, HIGH);
-    vTaskDelay( 250 / portTICK_PERIOD_MS );
+    vTaskDelay( 250 *1000/ portTICK_PERIOD_MS );
     digitalWrite(LED_BUILTIN, LOW);
-    vTaskDelay( 250 / portTICK_PERIOD_MS );
+    vTaskDelay( 250*1000 / portTICK_PERIOD_MS );
   }
 }
 
@@ -116,10 +118,16 @@ void TaskCanWrite(void *&pvParameters)
       for (int j = 0; j < NUM_COLS(data_Test_case_1); ++j) {
         dtostrf(data_Test_case_1[i][j].data, 4, 2, fstr);
         n += sprintf(prbuf + n, "%d:%s ", data_Test_case_1[i][j].msgType, fstr);
+      
       }
       Serial.println(prbuf);
+      for (int i = 0; i < 128; i++) {
+          SERIAL_PORT_MONITOR.print(buf[i]); SERIAL_PORT_MONITOR.print(" ");
+          CAN.sendMsgBuf(0x00, 0, 8, buf[i]);
+      }
+      
     }
-    vTaskDelay( 100 / portTICK_PERIOD_MS );
+    vTaskDelay( 100 *1000/ portTICK_PERIOD_MS );
   }
 
 }
@@ -159,6 +167,16 @@ void TaskCanRead(void *&pvParameters)
         n += sprintf(prbuf + n, "%02X ", cdata[i]);
       }
       Serial.println(prbuf);
+
+      SERIAL_PORT_MONITOR.println("checkReceive");
+      CAN.readMsgBuf(&len, buf);
+      // print the data
+      for (int i = 0; i < len; i++) {
+          SERIAL_PORT_MONITOR.print(buf[i]); SERIAL_PORT_MONITOR.print(" ");
+      }
+      SERIAL_PORT_MONITOR.println();
+    }else {
+      SERIAL_PORT_MONITOR.println("Error in receiving CAN packets!");
     }
   }
 }

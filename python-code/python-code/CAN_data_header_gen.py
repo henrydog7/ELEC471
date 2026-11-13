@@ -8,7 +8,7 @@ import numbers
 
 
 """ User Configurable Parameters """
-fileName = "brakelight_example_sldvdata.xlsx"   # Input file name exported from Simulink
+fileName = "Lab3_BreakLight_sldvdata.xlsx"   # Input file name exported from Simulink
 
 
 dfs = pd.read_excel(fileName, sheet_name=None)
